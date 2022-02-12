@@ -159,10 +159,10 @@ printAndSum(50, 60);
 
 /* 7. Triangle of Numbers 
 
-[ ] Create a function that receives a single number n
-[ ] Check if n is between 1 - 20
-[ ] Create a forloop that iterates from 1 to n and repeats each iteration n times on the same line
-[ ] Print the result to the console
+[x] Create a function that receives a single number n
+[x] Check if n is between 1 - 20
+[x] Create a forloop that iterates from 1 to n and repeats each iteration n times on the same line
+[x] Print the result to the console
 */
 
 function triangleOfNumbers(n) {
@@ -174,3 +174,17 @@ function triangleOfNumbers(n) {
 }
 
 triangleOfNumbers(10);
+/* 08. Multiplication Table
+
+[x] Write a function that receives a number
+[x] Write a for loop that loops 10 times over the number, multiplying it by the current iteration
+[ ] Print the result to the console in the form of a multiplicaiton table.
+*/
+
+function multiplicationTable(number) {
+	for (let i = 1; i <= 10; i++) {
+		console.log(number + ' X ' + i + ' = ' + number * i);
+	}
+}
+
+multiplicationTable(5);
