@@ -1,7 +1,5 @@
 /* 1. Ages */
 
-import { closeSync } from 'fs';
-
 function ages(age) {
 	if (age >= 0 && age <= 2) {
 		console.log('baby');
@@ -158,3 +156,21 @@ function printAndSum(startNumber, endNumber) {
 }
 
 printAndSum(50, 60);
+
+/* 7. Triangle of Numbers 
+
+[ ] Create a function that receives a single number n
+[ ] Check if n is between 1 - 20
+[ ] Create a forloop that iterates from 1 to n and repeats each iteration n times on the same line
+[ ] Print the result to the console
+*/
+
+function triangleOfNumbers(n) {
+	for (let i = 1; i <= n; i++) {
+		if (n >= 1 && n <= 20) {
+			console.log((i + ' ').toString().repeat(i));
+		}
+	}
+}
+
+triangleOfNumbers(10);
