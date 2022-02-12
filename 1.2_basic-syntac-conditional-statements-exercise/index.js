@@ -121,8 +121,8 @@ vacation(40, 'Regular', 'Saturday');
 /* 5. Leap year 
 
 [x] Write a function that receives a year
-[ ] Check if the year is divisible by 4 but not by 100 or is divisible by 400
-[ ] Print 'yes' or 'no' depending on wether the year is leap or not 
+[x] Check if the year is divisible by 4 but not by 100 or is divisible by 400
+[x] Print 'yes' or 'no' depending on wether the year is leap or not 
 */
 
 function leapYear(year) {
@@ -134,3 +134,27 @@ function leapYear(year) {
 }
 
 leapYear(4);
+
+/* 6. Print and sum 
+
+[x] Write a function that receive two number arguments
+[x] Create a for loop to iterate from the first(start) number to the second(end) number.
+[x] Create two variables outside the scope of the loop to hold all numbers and their sum
+[x] Sum each number in the sum variable 
+[x] Print all numbers from start to end and their sum in the following format, make sure to trim() them
+		1,2,3,4,5
+		Sum: 15
+*/
+
+function printAndSum(startNumber, endNumber) {
+	let sum = 0;
+	let allNumbers = '';
+	for (let i = startNumber; i <= endNumber; i++) {
+		sum += i;
+		allNumbers += i + ' ';
+	}
+
+	console.log(`${allNumbers.trim()}\nSum: ${sum}`);
+}
+
+printAndSum(50, 60);
