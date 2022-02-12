@@ -1,4 +1,4 @@
-// 1. Ages
+/* 1. Ages */
 
 import { closeSync } from 'fs';
 
@@ -18,7 +18,7 @@ function ages(age) {
 	}
 }
 
-// 2. Rounding
+/* 2. Rounding */
 
 function roundNumbers(number, decimel) {
 	if (decimel > 15) {
@@ -27,7 +27,7 @@ function roundNumbers(number, decimel) {
 	console.log(parseFloat(number.toFixed(decimel)));
 }
 
-// 3. Division
+/*3. Division*/
 
 function isDivisible(n) {
 	let allDivisions = [];
@@ -45,7 +45,17 @@ function isDivisible(n) {
 
 isDivisible(16);
 
-// 4. Vacation.
+/*4. Vacation.
+
+[x] Create a function that will return the correct pricing based on the type of group
+[x] Create a check for the type of day and assign the correct pricing for that day
+[x] Calculate the pricing for the entire group
+[x] Calculate discount if group matches the requirements
+[x] Print the price to the console
+ 
+** Total price: {price} -> the price should be formated toFixed(2) 
+
+*/
 
 function vacation(groupOfPeople, typeOfGroup, dayOfWeek) {
 	//Declare all pricing related variables.
@@ -108,11 +118,19 @@ function vacation(groupOfPeople, typeOfGroup, dayOfWeek) {
 
 vacation(40, 'Regular', 'Saturday');
 
-/*
-[x] Create a function that will return the correct pricing based on the type of group
-[x] Create a check for the type of day and assign the correct pricing for that day
-[x] Calculate the pricing for the entire group
-[x] Calculate discount if group matches the requirements
-[ ] Print the price to the console
- 
-** Total price: {price} -> the price should be formated toFixed(2) */
+/* 5. Leap year 
+
+[x] Write a function that receives a year
+[ ] Check if the year is divisible by 4 but not by 100 or is divisible by 400
+[ ] Print 'yes' or 'no' depending on wether the year is leap or not 
+*/
+
+function leapYear(year) {
+	if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+		console.log('yes');
+	} else {
+		console.log('no');
+	}
+}
+
+leapYear(4);
