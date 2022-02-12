@@ -188,3 +188,37 @@ function multiplicationTable(number) {
 }
 
 multiplicationTable(5);
+
+/* 09. Login 
+
+[x] Write a function that receives an array of strings
+[x] Save the password in a variable by reversing the 1st string in the array.
+[x] Create a counter for number of login attempts.
+[x] Loop over the array and compare each string from the array, starting from the 1st index to the password
+[x] Create check for login attempts.
+  => If it matches in three attempts, login user
+	=> If it takes more thatn three attempts, block the user and return correct message
+*/
+
+function login(userInformation) {
+	let user = userInformation[0];
+	let password = user.split('').reverse().join('');
+	let loginAttempts = 0;
+
+	for (let i = 1; i < userInformation.length; i++) {
+		if (userInformation[i] === password) {
+			console.log(`User ${user} logged in.`);
+		} else {
+			loginAttempts += 1;
+			if (loginAttempts >= 4) {
+				console.log(`User ${user} blocked!`);
+			} else {
+				console.log(`Incorrect password. Try again.`);
+			}
+		}
+	}
+}
+
+login(['Acer', 'login', 'go', 'let me in', 'recA']);
+login(['momo', 'omom']);
+login(['sunny', 'rainy', 'cloudy', 'sunny', 'not sunny']);
