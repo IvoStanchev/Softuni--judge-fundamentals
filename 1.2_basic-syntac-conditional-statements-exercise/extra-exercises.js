@@ -1,4 +1,9 @@
-/* 1 Sort Numbers */
+/* 1. Sort Numbers
+
+[x] Create a function that receives three numbers as arguments
+[x] Store the arguments as array 
+[x] Sort the array using the sort function and store the sorted array in a variable
+[x] Loop over the array and log each number on a new line*/
 
 function sortNumbers(num1, num2, num3) {
 	let arrayOfNumbers = [...arguments];
@@ -11,7 +16,13 @@ function sortNumbers(num1, num2, num3) {
 
 sortNumbers(-2, 1, 3);
 
-/* 2 English name of the last digit */
+/* 2. English name of the last digit 
+
+[x] Create a function that receives a number
+[x] Store all english names from 0 to 9 in a object
+[x] Store the last digit from the received number in a variable
+[x] Loop over the numbers object and check if the key matches the last digit, print the value of that key.
+*/
 
 function numberToEnglish(numberToTransform) {
 	const numbers = {
@@ -35,3 +46,24 @@ function numberToEnglish(numberToTransform) {
 }
 
 numberToEnglish(2423);
+
+/* 3. Next day 
+
+[ ] Create a function that receives three numbers, year, month and date
+[ ] Construct a new date with the Date constructor, the constructor should take the fucntion input as arguments
+[ ] Use the built in setDate method to increment the date by one
+[ ] Console log the result
+*/
+
+function nextDay(year, month, day) {
+	const testDate = new Date(`${year}-${month}-${day}`);
+
+	testDate.setDate(testDate.getDate() + 1);
+
+	const nextDate = testDate.toLocaleString().split(',')[0].split('/').reverse();
+	console.log(`${nextDate[0]}-${nextDate[2]}-${nextDate[1]}`);
+}
+
+nextDay(1, 1, 1);
+
+/* 4. Reverse a string */
