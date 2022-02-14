@@ -66,4 +66,16 @@ function nextDay(year, month, day) {
 
 nextDay(1, 1, 1);
 
-/* 4. Reverse a string */
+/* 4. Reverse a string
+
+[ ] Write a funciton that receives a string
+[ ] Save the string in a variable, use split() then reverse() then join()
+[ ] Console log the reversed string
+*/
+
+function reverseString(string) {
+	let reversed = string.toString().split('').reverse().join('');
+	console.log(reversed);
+}
+
+reverseString(1234);
