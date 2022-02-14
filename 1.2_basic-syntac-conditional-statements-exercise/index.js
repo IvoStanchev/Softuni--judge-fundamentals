@@ -178,7 +178,7 @@ triangleOfNumbers(10);
 
 [x] Write a function that receives a number
 [x] Write a for loop that loops 10 times over the number, multiplying it by the current iteration
-[ ] Print the result to the console in the form of a multiplicaiton table.
+[x] Print the result to the console in the form of a multiplicaiton table.
 */
 
 function multiplicationTable(number) {

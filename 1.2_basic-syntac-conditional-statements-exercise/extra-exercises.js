@@ -49,10 +49,10 @@ numberToEnglish(2423);
 
 /* 3. Next day 
 
-[ ] Create a function that receives three numbers, year, month and date
-[ ] Construct a new date with the Date constructor, the constructor should take the fucntion input as arguments
-[ ] Use the built in setDate method to increment the date by one
-[ ] Console log the result
+[x] Create a function that receives three numbers, year, month and date
+[x] Construct a new date with the Date constructor, the constructor should take the fucntion input as arguments
+[x] Use the built in setDate method to increment the date by one
+[x] Console log the result
 */
 
 function nextDay(year, month, day) {
@@ -68,9 +68,9 @@ nextDay(1, 1, 1);
 
 /* 4. Reverse a string
 
-[ ] Write a funciton that receives a string
-[ ] Save the string in a variable, use split() then reverse() then join()
-[ ] Console log the reversed string
+[x] Write a funciton that receives a string
+[x] Save the string in a variable, use split() then reverse() then join()
+[x] Console log the reversed string
 */
 
 function reverseString(string) {
