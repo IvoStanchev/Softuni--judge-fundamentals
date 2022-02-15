@@ -5,7 +5,7 @@
 [x] else print a predefined string 
 */
 
-function typeChecker(inputParameter) {
+function typeChecker(inputParameter: any) {
 	let typeOfParameter = typeof inputParameter;
 
 	if (typeOfParameter === 'string' || typeOfParameter === 'number') {
@@ -22,7 +22,11 @@ function typeChecker(inputParameter) {
   [x] Console log the two names with the parameter between them
 */
 
-function concatenateStrings(stringOne, stringTwo, delimiter) {
+function concatenateStrings(
+	stringOne: string,
+	stringTwo: string,
+	delimiter: string,
+) {
 	console.log(`${stringOne}${delimiter}${stringTwo}`);
 }
 
@@ -35,17 +39,21 @@ concatenateStrings('John', 'Smith', '->');
 [x] Log Matcher or Not Matched depending on wether the strings match or not
 */
 
-function replaceAndcompare(stringToModify, replacementChar, stringToCompare) {
+function replaceAndCompare(
+	stringToModify: string,
+	replacementChar: string,
+	stringToCompare: string,
+) {
 	// modify the string by replacing the underscore with the given replacement char
-	let modfifiedString = stringToModify.replace('_', replacementChar);
+	let modifiedString: string = stringToModify.replace('_', replacementChar);
 
 	// Practice ternary operators
-	modfifiedString === stringToCompare
+	modifiedString === stringToCompare
 		? console.log('Matched')
-		: console.log('Not Mached');
+		: console.log('Not Matched');
 }
-replaceAndcompare('Str_ng', 'I', 'Strong');
-replaceAndcompare('Str_ng', 'i', 'String');
+replaceAndCompare('Str_ng', 'I', 'Strong');
+replaceAndCompare('Str_ng', 'i', 'String');
 
 /* 4. Integer or float
 [x] Write a function that receives three numbers as parameters
@@ -54,12 +62,12 @@ replaceAndcompare('Str_ng', 'i', 'String');
 [x] Print the sum and type of the number
 */
 
-function sumAndType(num1, num2, num3) {
+function sumAndType(num1: number, num2: number, num3: number) {
 	let sumOfNumbers = num1 + num2 + num3;
 
 	sumOfNumbers % 1 === 0
-		? (sumOfNumbers += ' - Integer')
-		: (sumOfNumbers += ' - Float');
+		? `${sumOfNumbers} - Integer`
+		: `${sumOfNumbers} - Float`;
 
 	console.log(sumOfNumbers);
 }
@@ -68,7 +76,7 @@ sumAndType(9, 100, 1.1);
 
 /* 5. Amazing Numbers
 
-[x] Write a function that receives a number as paramater.
+[x] Write a function that receives a number as parameter.
 [x] Split the number into separate digits
 [x] Calculate the sum of the digits
 [x] Check if the final number contains a 9
@@ -76,7 +84,7 @@ sumAndType(9, 100, 1.1);
 [x] log {number} Amazing? {True or False}
 */
 
-function amazingNumbers(number) {
+function amazingNumbers(number: number) {
 	let sum = 0;
 	number
 		.toString()
@@ -95,11 +103,11 @@ amazingNumbers(999);
 /* 6. Gramophone
 [x] Write a function that receives 3 string parameters, bandName, bandAlbum, songName
 [x] Calculate the song duration with this formula (albumName.length * bandName.length) * song-name.length / 2
-[ ] Divide the song duration by 2.5 to find and round up the result. This will find how many times the plate will rotate
-[ ] Log to the console `The plate was rotated {ROTATIONS} times.`
+[x] Divide the song duration by 2.5 to find and round up the result. This will find how many times the plate will rotate
+[x] Log to the console `The plate was rotated {ROTATIONS} times.`
   */
 
-function gramophone(bandName, bandAlbum, songName) {
+function gramophone(bandName: string, bandAlbum: string, songName: string) {
 	let songDuration = (bandAlbum.length * bandName.length * songName.length) / 2;
 	let rotations = Math.ceil(songDuration / 2.5);
 
@@ -108,3 +116,8 @@ function gramophone(bandName, bandAlbum, songName) {
 
 gramophone('Black Sabbath', 'Paranoid', 'War Pigs');
 gramophone('Rammstein', 'Sehnsucht', 'Engel');
+
+/* 7. Required reading
+[ ] Write a function 
+
+*/
