@@ -92,4 +92,19 @@ function amazingNumbers(number) {
 amazingNumbers(1233);
 amazingNumbers(999);
 
-/* 6. Gramophone */
+/* 6. Gramophone
+[x] Write a function that receives 3 string parameters, bandName, bandAlbum, songName
+[x] Calculate the song duration with this formula (albumName.length * bandName.length) * song-name.length / 2
+[ ] Divide the song duration by 2.5 to find and round up the result. This will find how many times the plate will rotate
+[ ] Log to the console `The plate was rotated {ROTATIONS} times.`
+  */
+
+function gramophone(bandName, bandAlbum, songName) {
+	let songDuration = (bandAlbum.length * bandName.length * songName.length) / 2;
+	let rotations = Math.ceil(songDuration / 2.5);
+
+	console.log(`The plate was rotated ${rotations} times.`);
+}
+
+gramophone('Black Sabbath', 'Paranoid', 'War Pigs');
+gramophone('Rammstein', 'Sehnsucht', 'Engel');
