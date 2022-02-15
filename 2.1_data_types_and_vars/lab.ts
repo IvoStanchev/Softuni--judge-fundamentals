@@ -118,6 +118,21 @@ gramophone('Black Sabbath', 'Paranoid', 'War Pigs');
 gramophone('Rammstein', 'Sehnsucht', 'Engel');
 
 /* 7. Required reading
-[ ] Write a function 
-
+[x] Write a function that has three parameters, numberOfPages, pagesReadInOneHour, daysToReadTheBook
+[ ] Calculate the time required to read the book by dividing the number of pages and pages read in one hour, then store that in a variable
+[ ] Calculate the required time per day to read the book by dividing the total time by daysToReadBook
+[ ] Console log the result
 */
+
+function requiredReading(
+	numberOfPages: number,
+	pagesReadInOneHour: number,
+	daysToReadTheBook: number,
+) {
+	let totalTimeToRead = numberOfPages / pagesReadInOneHour;
+	let hoursPerDayToRead = totalTimeToRead / daysToReadTheBook;
+
+	console.log(hoursPerDayToRead);
+}
+
+requiredReading(432, 15, 4);
