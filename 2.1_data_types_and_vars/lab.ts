@@ -136,3 +136,22 @@ function requiredReading(
 }
 
 requiredReading(432, 15, 4);
+
+/* 8. Centuries to Minutes
+[x] Write a function with one parameter, number
+[x] The number represents a century that needs to be converted to year days hours and minutes.
+[x] Console log '1 centuries = 100 years = 36524 days = 876576 hours = 52594560 minutes'
+*/
+
+function centuriesToMinutes(century: number) {
+	let years = century * 100;
+	let days = Math.trunc(years * 365.2422);
+	let hours = days * 24;
+	let minutes = hours * 60;
+
+	console.log(
+		`${century} centuries = ${years} years = ${days} days = ${hours} hours = ${minutes} minutes`,
+	);
+}
+
+centuriesToMinutes(1);
