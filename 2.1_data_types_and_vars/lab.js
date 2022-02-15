@@ -46,3 +46,50 @@ function replaceAndcompare(stringToModify, replacementChar, stringToCompare) {
 }
 replaceAndcompare('Str_ng', 'I', 'Strong');
 replaceAndcompare('Str_ng', 'i', 'String');
+
+/* 4. Integer or float
+[x] Write a function that receives three numbers as parameters
+[x] Sum the numbers and store them in a variable
+[x] Check if the number is a float or an integer
+[x] Print the sum and type of the number
+*/
+
+function sumAndType(num1, num2, num3) {
+	let sumOfNumbers = num1 + num2 + num3;
+
+	sumOfNumbers % 1 === 0
+		? (sumOfNumbers += ' - Integer')
+		: (sumOfNumbers += ' - Float');
+
+	console.log(sumOfNumbers);
+}
+
+sumAndType(9, 100, 1.1);
+
+/* 5. Amazing Numbers
+
+[x] Write a function that receives a number as paramater.
+[x] Split the number into separate digits
+[x] Calculate the sum of the digits
+[x] Check if the final number contains a 9
+[x] If yes the number is Amazing else its not
+[x] log {number} Amazing? {True or False}
+*/
+
+function amazingNumbers(number) {
+	let sum = 0;
+	number
+		.toString()
+		.split('')
+		.forEach((number) => {
+			sum += +number;
+		});
+
+	let result = sum.toString().includes('9');
+	console.log(result ? `${number} Amazing? True` : `${number} Amazing? False`);
+}
+
+amazingNumbers(1233);
+amazingNumbers(999);
+
+/* 6. Gramophone */
