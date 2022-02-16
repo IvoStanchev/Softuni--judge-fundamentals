@@ -213,13 +213,13 @@ function solve(num) {
 solve(20);
 
 /* 10. Triples of Latin Letters 
-[ ] Write a function with one parameter "number"
-[ ] Create three loops that go over the alphabet.
-[ ] Each loop should print the number of letters from the alphabet according to the passed function argument
-[ ] Print the letters concatenated 
+[x] Write a function with one parameter "number"
+[x] Create three loops that go over the alphabet.
+[x] Each loop should print the number of letters from the alphabet according to the passed function argument
+[x] Print the letters concatenated 
 */
 
-function triplesOfLetters(num) {
+function triplesOfLetters(num: number) {
 	// Find the charcode of 'a'
 	let firstNum = 'a'.charCodeAt(0);
 
