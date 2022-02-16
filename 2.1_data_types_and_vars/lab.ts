@@ -155,3 +155,59 @@ function centuriesToMinutes(century: number) {
 }
 
 centuriesToMinutes(1);
+
+/* 9. Special numbers
+[x] Write a function with one parameter "n"
+[x] Create a for loop and print the numbers from one to "n"
+[x] Check if the number is 5,7 or 11 and dave the boolean in a variable.
+[x] Sum the two digit numbers and check if their sum is 5,7 or 11 and save the result.
+[x] Print to the console the numbers and the boolean check
+*/
+
+function specialNumbers(number: number) {
+	for (let i = 1; i <= number; i++) {
+		let isSpecial = 'False';
+		let sum = 0;
+		sum = i
+			.toString()
+			.split('')
+			.map(Number)
+			.reduce(function (a, b) {
+				return a + b;
+			}, 0);
+
+		if (sum == 5 || sum == 7 || sum == 11) {
+			isSpecial = 'True';
+		}
+
+		console.log(`${i} -> ${isSpecial}`);
+	}
+}
+
+specialNumbers(20);
+
+function solve(num) {
+	let temp = 0;
+	let check = false;
+	let sum = 0;
+
+	for (let i = 1; i <= num; i++) {
+		temp = i;
+		while (temp !== 0) {
+			sum += temp % 10;
+			temp = Math.floor(temp / 10);
+		}
+
+		if (sum === 5 || sum === 7 || sum === 11) {
+			check = true;
+			console.log(i + ' -> True');
+		} else {
+			check = false;
+			console.log(i + ' -> False');
+		}
+
+		sum = 0;
+	}
+}
+
+solve(20);
