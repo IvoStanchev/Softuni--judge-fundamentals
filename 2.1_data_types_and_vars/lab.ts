@@ -119,9 +119,9 @@ gramophone('Rammstein', 'Sehnsucht', 'Engel');
 
 /* 7. Required reading
 [x] Write a function that has three parameters, numberOfPages, pagesReadInOneHour, daysToReadTheBook
-[ ] Calculate the time required to read the book by dividing the number of pages and pages read in one hour, then store that in a variable
-[ ] Calculate the required time per day to read the book by dividing the total time by daysToReadBook
-[ ] Console log the result
+[x] Calculate the time required to read the book by dividing the number of pages and pages read in one hour, then store that in a variable
+[x] Calculate the required time per day to read the book by dividing the total time by daysToReadBook
+[x] Console log the result
 */
 
 function requiredReading(
@@ -211,3 +211,38 @@ function solve(num) {
 }
 
 solve(20);
+
+/* 10. Triples of Latin Letters 
+[ ] Write a function with one parameter "number"
+[ ] Create three loops that go over the alphabet.
+[ ] Each loop should print the number of letters from the alphabet according to the passed function argument
+[ ] Print the letters concatenated 
+*/
+
+function triplesOfLetters(num) {
+	// Find the charcode of 'a'
+	let firstNum = 'a'.charCodeAt(0);
+
+	// Loop the first letter
+	for (let firstLetter = 0; firstLetter < num; firstLetter++) {
+		console.log(firstLetter);
+		//Loop the second letter
+		for (let secondLetter = 0; secondLetter < num; secondLetter++) {
+			console.log(secondLetter);
+			//Loop the third letter
+			for (let thirdLetter = 0; thirdLetter < num; thirdLetter++) {
+				console.log(firstLetter);
+				console.log(secondLetter);
+				console.log(thirdLetter);
+				let result = String.fromCharCode(
+					firstNum + firstLetter,
+					firstNum + secondLetter,
+					firstNum + thirdLetter,
+				);
+				console.log(result);
+			}
+		}
+	}
+}
+
+triplesOfLetters(3);
