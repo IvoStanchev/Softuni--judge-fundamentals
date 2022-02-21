@@ -75,3 +75,22 @@ function reverseArray(arr) {
 }
 
 reverseArray(['a', 'b', 'c', 'd', 'e']);
+
+/* 5 Sum even numbers
+ * [x] Create a function that receives and array of numbers
+ * [x] Reduce the array by returning the sum of only the even numbers
+ * [x] Log the result to the console
+ */
+
+function sumEvenNumbers(arr) {
+	let result = arr.reduce((result, number) => {
+		number % 2 == 0 ? (result += parseInt(number)) : result;
+		return result;
+	}, 0);
+
+	console.log(result);
+}
+
+sumEvenNumbers(['1', '2', '3', '4', '5', '6']);
+
+/* 6. Even and Odd subtraction */
