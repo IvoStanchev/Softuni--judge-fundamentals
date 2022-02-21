@@ -110,3 +110,36 @@ function evenAndOddSubtraction(arr) {
 }
 
 evenAndOddSubtraction([3, 5, 7, 9]);
+
+/* 7. Equal Arrays
+ * [x] create a function that receives two arrays containing strings
+ * [x] Loop over one array and compare each of their numbers
+ * [x] Collect the sum of all numbers in a variable
+ * [x] If all numbers match log the required text and the sum of the arrays
+ * [x] If they don't match log the index on which the check failed and end the loop
+ *  */
+
+function equalArrays(arr1, arr2) {
+	let sum = 0;
+	let failedIndex = 0;
+	let match = false;
+
+	for (let i = 0; i < arr1.length; i++) {
+		if (arr1[i] === arr2[i]) {
+			// Check if the numbers match.
+			sum += parseInt(arr1[i]); // Sum the numbers
+			match = true;
+		} else {
+			match = false;
+			failedIndex = i; // Store the index on which the numbers differ
+			break; // Stop the loop.
+		}
+	}
+	match
+		? console.log(`Arrays are identical. Sum: ${sum}`)
+		: console.log(
+				`Arrays are not identical. Found difference at ${failedIndex} index`,
+		  );
+}
+
+equalArrays(['10', '20', '30'], ['10', '20', '30']);
