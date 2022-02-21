@@ -167,7 +167,7 @@ function condenseArray(arr) {
 		arr = condensed;
 		condensed = [];
 	}
-	console.log(...condensed);
+	console.log(...arr);
 }
 
 condenseArray([2, 10, 3]);
