@@ -93,4 +93,20 @@ function sumEvenNumbers(arr) {
 
 sumEvenNumbers(['1', '2', '3', '4', '5', '6']);
 
-/* 6. Even and Odd subtraction */
+/* 6. Even and Odd subtraction
+ * [x] Create a function that receives an array of numbers
+ * [x] Create two variables that will hold the even and odd numbers from an array
+ * [x] Map over the array and assign the odd and even numbers accordingly
+ * [x] Log to the console the subtraction of even and odd.
+ */
+
+function evenAndOddSubtraction(arr) {
+	let even = 0;
+	let odd = 0;
+	arr.map((x) => {
+		x % 2 === 0 ? (even += x) : (odd += x);
+	});
+	console.log(even - odd);
+}
+
+evenAndOddSubtraction([3, 5, 7, 9]);
