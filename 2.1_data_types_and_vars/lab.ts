@@ -186,7 +186,7 @@ function specialNumbers(number: number) {
 
 specialNumbers(20);
 
-function solve(num) {
+function spacial(num) {
 	let temp = 0;
 	let check = false;
 	let sum = 0;
@@ -210,7 +210,7 @@ function solve(num) {
 	}
 }
 
-solve(20);
+spacial(20);
 
 /* 10. Triples of Latin Letters 
 [x] Write a function with one parameter "number"
