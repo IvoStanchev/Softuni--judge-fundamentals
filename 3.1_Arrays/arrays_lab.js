@@ -143,3 +143,31 @@ function equalArrays(arr1, arr2) {
 }
 
 equalArrays(['10', '20', '30'], ['10', '20', '30']);
+
+/* 8. Condense Array to Numbers
+ * [x] Create a function that receives one array
+ * [x] Create an array that holds the condensed numbers
+ * [x] Create a while loop that runs as long as the original array has more than one
+ * [x] Create a for loop that runs for the length of the original array
+ * [x] Sum the current array number with the next array number
+ * [x] Push the sum in the condensed array
+ * [x] In the while loop set the original array to the value of the condensed array
+ * [x] Empty the condensed array
+ * [x] Print the condensed array.
+ */
+
+function condenseArray(arr) {
+	let condensed = [];
+
+	while (arr.length > 1) {
+		for (let i = 0; i < arr.length - 1; i++) {
+			let sum = arr[i] + arr[i + 1];
+			condensed.push(sum);
+		}
+		arr = condensed;
+		condensed = [];
+	}
+	console.log(...condensed);
+}
+
+condenseArray([2, 10, 3]);
